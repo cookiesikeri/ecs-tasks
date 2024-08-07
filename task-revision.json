@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:471112656325:task-definition/app:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:471112656325:task-definition/app:2",
     "containerDefinitions": [
         {
             "name": "app",
@@ -34,9 +34,10 @@
         }
     ],
     "family": "app",
+    "taskRoleArn": "arn:aws:iam::471112656325:role/EcsTaskRole",
     "executionRoleArn": "arn:aws:iam::471112656325:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -51,6 +52,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -79,7 +83,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-08-07T23:32:47.373Z",
+    "registeredAt": "2024-08-07T23:40:23.042Z",
     "registeredBy": "arn:aws:iam::471112656325:user/agent007",
     "tags": []
 }
